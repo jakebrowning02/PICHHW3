@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}View Random Messages{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="num">How many messages would you like to see? (1-5)</label>
+    <input name="num" id="num" value="{{ request.form['num'] }}" required>
+    <input type="submit" value="Submit number">
+  </form>
+{% endblock %}
